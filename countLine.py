@@ -40,6 +40,7 @@ def light_on():
   print("light up!!!!!!!!!!!!!!!!!!!")
   GPIO.output(4, GPIO.HIGH) # Turn on
 
+
 def light_off():
   print("light off??????")
   GPIO.output(4, GPIO.LOW) # Turn on
@@ -59,7 +60,7 @@ count = 0
 
 def entered_line():
   light_on()
-  global count
+  global count 
   count = count + 1
   print("count=" + str(count))
   show_count()
@@ -114,6 +115,7 @@ def check_exit():
      tripped_time_sec_exit = 0
      is_tripped_exit = False
      exit_light_off()
+     
 
 try:
 # Loop continually to check sensors
@@ -124,4 +126,8 @@ try:
 
 except KeyboardInterrupt:
   GPIO.cleanup()
+
+
+
+
 
